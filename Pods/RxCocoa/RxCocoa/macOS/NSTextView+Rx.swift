@@ -39,7 +39,7 @@ open class RxTextViewDelegateProxy: DelegateProxy<NSTextView, NSTextViewDelegate
         let textView: NSTextView = castOrFatalError(notification.object)
         let nextValue = textView.string
         self.textSubject.on(.next(nextValue))
-        self._forwardToDelegate?.textDidChange?(notification)
+        _forwardToDelegate?.textDidChange?(notification)
     }
 
     // MARK: Delegate proxy methods
@@ -62,18 +62,18 @@ extension Reactive where Base: NSTextView {
     ///
     /// For more information take a look at `DelegateProxyType` protocol documentation.
     public var delegate: DelegateProxy<NSTextView, NSTextViewDelegate> {
-        return RxTextViewDelegateProxy.proxy(for: self.base)
+        return RxTextViewDelegateProxy.proxy(for: base)
     }
 
     /// Reactive wrapper for `string` property.
     public var string: ControlProperty<String> {
-        let delegate = RxTextViewDelegateProxy.proxy(for: self.base)
+        let delegate = RxTextViewDelegateProxy.proxy(for: base)
 
         let source = Observable.deferred { [weak textView = self.base] in
             delegate.textSubject.startWith(textView?.string ?? "")
-        }.takeUntil(self.deallocated)
+        }.takeUntil(deallocated)
 
-        let observer = Binder(self.base) { control, value in
+        let observer = Binder(base) { (control, value) in
             control.string = value
         }
 

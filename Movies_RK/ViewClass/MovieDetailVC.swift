@@ -42,10 +42,11 @@ class MovieDetailVC: UITableViewController {
         bindname()
         
         let urlstring = "http://image.tmdb.org/t/p/w185" + posterimage
-        imgposter.sd_setImage(with: URL(string: urlstring), placeholderImage: nil, options: .queryDiskDataSync, completed: nil)
+       // imgposter!.sd_setImage(with: URL(string: urlstring), placeholderImage: nil, options: 0, completed: nil)
+        imgposter.sd_setImageWithPreviousCachedImage(with: URL(string: urlstring), placeholderImage: nil, options: [], progress: nil, completed: nil)
         
         let urlstringbg = "http://image.tmdb.org/t/p/w185" + bgimage
-        imgbg.sd_setImage(with: URL(string: urlstringbg), placeholderImage: nil, options: .queryDiskDataSync, completed: nil)
+        imgbg.sd_setImageWithPreviousCachedImage(with: URL(string: urlstring), placeholderImage: nil, options: [], progress: nil, completed: nil)
         
     }
     

@@ -16,7 +16,7 @@ class MoviewDetailViewMDL{
     
     let provider = MoyaProvider<MoviesServices>()
     let results  = BehaviorRelay<Detail?>(value: nil)
-    s
+    
     init(movieid:String) {
         requestdetails(movieid: movieid)
     }

@@ -32,7 +32,9 @@ class DiscoverTblCell: UITableViewCell {
         
         if let img = data.posterPath{
             let urlstring = "http://image.tmdb.org/t/p/w185" + img
-            imgMovie.sd_setImage(with: URL(string: urlstring), placeholderImage: nil, options: .queryDiskDataSync, completed: nil)
+            imgMovie.sd_setImageWithPreviousCachedImage(with: URL(string: urlstring), placeholderImage: nil, options: [], progress: nil, completed: nil)
+            
+           // imgMovie.sd_setImage(with: URL(string: urlstring), placeholderImage: nil, options: .queryDiskDataSync, completed: nil)
         }
     }
     

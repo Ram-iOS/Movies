@@ -6,7 +6,6 @@ target 'Movies_RK' do
   use_frameworks!
 
   # Pods for Movies_RK
-
 pod 'Moya'
 pod 'SDWebImage'
 pod 'RxSwift'
