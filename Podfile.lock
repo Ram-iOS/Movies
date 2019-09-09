@@ -1,0 +1,52 @@
+PODS:
+  - Alamofire (4.9.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Result (4.1.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SDWebImage (5.1.1):
+    - SDWebImage/Core (= 5.1.1)
+  - SDWebImage/Core (5.1.1)
+
+DEPENDENCIES:
+  - MagicalRecord
+  - Moya
+  - RxCocoa
+  - RxSwift
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - MagicalRecord
+    - Moya
+    - Result
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
+
+PODFILE CHECKSUM: e6f99b28d610e75cec6714668dd93a65c00109ed
+
+COCOAPODS: 1.8.0.beta.2

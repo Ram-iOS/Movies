@@ -1,0 +1,6 @@
+framework module Pods_Movies_RK {
+  umbrella header "Pods-Movies_RK-umbrella.h"
+
+  export *
+  module * { export * }
+}
